@@ -1,3 +1,4 @@
+# 批量重命名文件
 import os
 
 def main():
