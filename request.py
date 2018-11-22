@@ -20,7 +20,7 @@ def httpGet(url, params={}, headers={}):
 def testPost():
     url = "https://www.easy-mock.com/mock/5b2b67c175a11308f6accadb/example/upload"
     data = {
-        'test': 1
+        'page': 1
     }
     resp = httpPost(url, data=data)
     resp = resp.read()
@@ -31,7 +31,7 @@ def testPost():
 def testGet():
     url = "https://www.easy-mock.com/mock/5b2b67c175a11308f6accadb/example/query"
     params = {
-        'test': 1
+        'page': 1
     }
     resp = httpGet(url, params=params)
     resp = resp.read()
