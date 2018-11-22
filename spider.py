@@ -4,6 +4,7 @@ import re
 import random
 import time
 import math
+import os
 
 pool = []
 host = "https://cn.bing.com"
@@ -32,7 +33,11 @@ def getRandom():
 
 def downloadImg(src):
     random = getRandom()
-    urllib.request.urlretrieve(src, 'images/%s.jpg' % random)
+    dist = 'images'
+    filename = dist + '/%s.jpg' % random
+    if not os.path.exists(dist):
+        os.mkdir(dist)
+    urllib.request.urlretrieve(src, filename)
 
 def getTodayImg(idx = 0):
     url = getUrl(idx)
