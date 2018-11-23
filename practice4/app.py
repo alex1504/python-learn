@@ -8,5 +8,9 @@ def index():
 
 
 @app.route('/hello/<param>')
-def hello(param = None):
+def hello(param=None):
     return render_template('hello.html', param=param)
+
+
+if __name__ == '__main__':
+    app.run()
